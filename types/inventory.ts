@@ -2,7 +2,7 @@ export interface SerialNumber {
   id: string
   itemId: string
   serialNumber: string
-  specs: string // Back to string but will support multiline
+  specs: string 
   status: "good" | "broken"
   dateAdded: string
 }

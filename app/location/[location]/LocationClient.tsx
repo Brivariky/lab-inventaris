@@ -133,7 +133,7 @@ const handleSerialSubmit = async (e: React.FormEvent) => {
   }
 
   await fetchTotalQuantity(decodedLocation); 
-  await fetchSerialNumbers(selectedItem.id); // ⬅ Refresh serials
+  await fetchSerialNumbers(selectedItem.id);
   resetSerialForm();
   setIsAddSerialDialogOpen(false);
   window.location.reload();
@@ -174,7 +174,7 @@ const handleSerialSubmit = async (e: React.FormEvent) => {
     if (!selectedItem) return;
     if (confirm("Apakah Anda yakin ingin menghapus Kode Inventaris ini?")) {
       await deleteSerialNumber(id);
-      await fetchSerialNumbers(selectedItem.id); // ⬅ Refresh serials
+      await fetchSerialNumbers(selectedItem.id);
     }
     window.location.reload();
   };
